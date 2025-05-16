@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Input Data</title>
+  <link rel="stylesheet" href="styles/input_data.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    .btn-green {
+      background-color: #28a745;
+      color: white;
+    }
+    .btn-green:hover {
+      background-color: #218838;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar d-flex flex-column justify-content-between">
+    <div>
+      <div class="logo">
+        <img src="./images/logo.png" alt="Logo" class="img-fluid" style="max-height: 60px;">
+        <p style="font-size: 13px;">PT. MITRA ABADI MAHAKAM</p>
+      </div>
+      <nav class="nav flex-column">
+        <a class="nav-link" href="dashboard.html"><i class="bi bi-speedometer2 me-2"></i>Dashboard</a>
+        <a class="nav-link" href="prediksi.html"><i class="bi bi-graph-up-arrow me-2"></i>Prediksi</a>
+        <a class="nav-link active bg-white text-dark rounded-pill mx-3 mt-1" href="input_data.html"><i class="bi bi-database-add me-2"></i>Input Data</a>
+        <a class="nav-link" href="user_guide.html"><i class="bi bi-book me-2"></i>User Guide</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="content">
+    <!-- Logout button -->
+    <div class="logout">
+      <button class="btn btn-danger rounded-pill px-4"><i class="bi bi-power"></i> Logout</button>
+    </div>
+
+    <!-- Main input card -->
+    <div class="card-content mt-5">
+      <div class="alert alert-secondary fw-semibold">
+        <p>INFORMASI</p>
+        <p>Lakukan penambahan data harian mengenai penggunaan bahan bakar! Data ini penting sebagai dasar analisis dan prediksi kebutuhan solar di masa mendatang.</p>
+      </div>
+      <div class="input-section mt-4">
+        <form>  
+          <div class="row mb-3">
+            <div class="col-md-3">
+              <label for="tanggal" class="form-label fw-semibold">Tanggal</label>
+              <input type="date" id="tanggal" class="form-control">
+            </div>
+            <div class="col-md-3">
+              <label for="liter" class="form-label fw-semibold">Liter</label>
+              <input type="number" id="liter" class="form-control" placeholder="123205">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-outline-dark w-100">TAMBAH DATA</button>
+        </form>
+        <div class="d-flex justify-content-end align-items-center mt-4">
+          <span class="me-2 fw-semibold">Download data di:</span>
+          <button class="btn btn-green">UNDUH DATA</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
